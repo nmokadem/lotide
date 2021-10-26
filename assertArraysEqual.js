@@ -1,11 +1,3 @@
-const printMessage = function(actual, expected, checkEqual) {
-  if (checkEqual) {
-    console.log("✅✅✅ Assertion Passed: ", actual, " === ", expected);
-  } else {
-    console.log("🛑🛑🛑 Assertion Failed: ", actual, " !== ", expected);
-  }
-};
-
 const assertEqual1 = function(actual, expected) {
   return actual === expected;
 }
