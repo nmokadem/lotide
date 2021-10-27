@@ -37,7 +37,7 @@ const firstNames = [
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 //console.log(result1, result1["Jason"]);
 
-console.log(assertEqual(result1["Jason"], 1));
-console.log(assertEqual(result1["Karima"], undefined));
-console.log(assertEqual(result1["Fang"], 2));
-console.log(assertEqual(result1["Agouhanna"], undefined));
+printMessage(result1["Jason"], 1,assertEqual(result1["Jason"], 1));
+printMessage(result1["Karima"], undefined,assertEqual(result1["Karima"], undefined));
+printMessage(result1["Fang"], 2,assertEqual(result1["Fang"], 2));
+printMessage(result1["Agouhanna"], undefined,assertEqual(result1["Agouhanna"], undefined));
