@@ -10,7 +10,5 @@ const assertEqual = function(actual, expected) {
   return actual === expected;
 };
 
-// TEST CODE
-printMessage("Lighthouse Labs", "Bootcamp",assertEqual("Lighthouse Labs", "Bootcamp"));
-printMessage(1, 1,assertEqual(1, 1));
-//assertEqual(1, 1);
+
+module.exports = {assertEqual, printMessage};
