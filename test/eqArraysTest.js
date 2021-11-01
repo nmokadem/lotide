@@ -1,6 +1,6 @@
 // test/eqArrays.js
 
-const {eqArrays} = require('../eqArrays')
+const {eqArrays} = require('../eqArrays');
 
 
 //TestCases
