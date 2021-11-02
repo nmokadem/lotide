@@ -1,6 +1,6 @@
 // test/assertEqualTest.js
 
-const {assertEqual, printMessage} = require('../assertEqual');
+const {assertEqual, printMessage} = require('./assertEqual');
 
 // TEST CODE
 printMessage("Lighthouse Labs", "Bootcamp",assertEqual("Lighthouse Labs", "Bootcamp"));

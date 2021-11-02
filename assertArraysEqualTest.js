@@ -1,5 +1,5 @@
-const {assertArraysEqual} = require('../assertArraysEqual');
-const {printMessage} = require('../assertEqual');
+const {assertArraysEqual} = require('./assertArraysEqual');
+const {printMessage} = require('./assertEqual');
 
 // TEST CODE
 let array1 = [1, 2, 3];
