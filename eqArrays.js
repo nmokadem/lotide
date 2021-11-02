@@ -1,4 +1,5 @@
 const {assertEqual} = require('./assertEqual');
+//const _ = require('./index.js');
 
 const eqArrays = function(actual, expected) {
   if (!Array.isArray(actual) || !Array.isArray(expected) || actual.length !== expected.length) {
@@ -22,4 +23,4 @@ const eqArrays = function(actual, expected) {
   return flag;
 };
 
-module.exports = {eqArrays};
+module.exports = eqArrays;

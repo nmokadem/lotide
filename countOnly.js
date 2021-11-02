@@ -1,14 +1,4 @@
-const printMessage = function(actual, expected, checkEqual) {
-  if (checkEqual) {
-    console.log("✅✅✅ Assertion Passed: ", actual, " === ", expected);
-  } else {
-    console.log("🛑🛑🛑 Assertion Failed: ", actual, " !== ", expected);
-  }
-};
-
-const assertEqual = function(actual, expected) {
-  return actual === expected;
-};
+const {assertEqual, printMessage} = require('./assertEqual');
 
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
@@ -41,3 +31,5 @@ printMessage(result1["Jason"], 1,assertEqual(result1["Jason"], 1));
 printMessage(result1["Karima"], undefined,assertEqual(result1["Karima"], undefined));
 printMessage(result1["Fang"], 2,assertEqual(result1["Fang"], 2));
 printMessage(result1["Agouhanna"], undefined,assertEqual(result1["Agouhanna"], undefined));
+
+module.exports = countOnly;

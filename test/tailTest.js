@@ -1,18 +1,18 @@
 const assert = require('chai').assert;
-const {tail}   = require('../tail');
+const _ = require('../index.js');
 
 describe("#tail", () => {
   it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
     const input = ["Hello", "Lighthouse", "Labs"];
     const expectedOutput = ["Lighthouse", "Labs"];
-    const result = tail(input);  
+    const result = _.tail(input);  
     assert.deepEqual(result,expectedOutput);
   });
 
   it("tail function does not alter input array", () => {
     const input = ["Hello", "Lighthouse", "Labs"];
     const expectedOutput = 3;
-    tail(input);
+    _.tail(input);
     const result = input.length;  
     assert.deepEqual(result,expectedOutput);
   });

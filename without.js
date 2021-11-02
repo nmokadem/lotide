@@ -1,30 +1,5 @@
-const printMessage = function(actual, expected, checkEqual) {
-  if (checkEqual) {
-    console.log("✅✅✅ Assertion Passed: ", actual, " === ", expected);
-  } else {
-    console.log("🛑🛑🛑 Assertion Failed: ", actual, " !== ", expected);
-  }
-};
-
-const assertEqual = function(actual, expected) {
-  return actual === expected;
-}
-
-const eqArrays = function(actual, expected) {
-  let flag = true;
-
-  if (Array.isArray(actual) && Array.isArray(expected) && actual.length === expected.length) {
-    for (let i = 0; i < actual.length; i++) {
-      if (assertEqual(actual[i], expected[i])) continue;
-      flag = false;
-      break;
-    }
-  } else {
-    flag = false;
-  }
-
-  return flag;
-};
+const {assertEqual, printMessage} = require('./assertEqual');
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = function(actual, expected) {
   printMessage(actual, expected, eqArrays(actual, expected));
@@ -50,3 +25,5 @@ without(words, ["lighthouse"]); // no need to capture return value for this test
 // Make sure the original array was not altered by the without function
 //assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+module.exports = without;

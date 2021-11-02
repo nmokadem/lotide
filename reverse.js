@@ -14,7 +14,7 @@ const reverse = function(args) {
 console.log(reverse(process.argv.slice(2)));
 
 /*
-node reverse.js hello goodbyen
+node reverse.js hello goodbye
 olleh
 eybdoog
 */
